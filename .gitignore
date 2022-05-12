@@ -1,0 +1,11 @@
+/bookmarks
+/recentf
+
+*~
+*.data
+
+auto-save-list/
+elpa/
+eshell/
+games/
+server/
