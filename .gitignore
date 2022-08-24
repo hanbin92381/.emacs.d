@@ -5,9 +5,11 @@
 *.data
 
 auto-save-list/
+eln-cache/
 elpa/
 eshell/
 games/
 image-dired/
 server/
+snippets/
 url/

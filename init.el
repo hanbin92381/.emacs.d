@@ -1,4 +1,10 @@
-;;; init.el --- The main entry for emacs
+;;; init.el --- Load the full configuration -*- lexical-binding: t -*-
+;;; Commentary:
+
+;; This file bootstraps the configuration, which is divided into
+;; a number of other files.
+
+;;; Code:
 
 ;; load path
 (let ((dir (locate-user-emacs-file "lisp")))
@@ -13,40 +19,39 @@
 
 ;; 导入各部分配置
 (require 'init-packages)
-(require 'init-base)
+(require 'init-basic)
+(require 'init-completion)
+(require 'init-tools)
 (require 'init-ui)
-;;(require 'init-evil)
 
-;;modeline上显示我的所有的按键和执行的命令
-(package-install 'keycast)
-(keycast-mode t)
 
-;; ;;一系列高效插件
-;; (package-install 'vertico)
-;; (vertico-mode t)
 
-;; (package-install 'orderless)
-;; (setq completion-styles '(orderless))
+(global-set-key (kbd "C-h C-f") 'find-function)
+(global-set-key (kbd "C-h C-v") 'find-variable)
+(global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
-;; (package-install 'marginalia)
-;; (marginalia-mode t)
+(global-set-key (kbd "M-w") 'kill-region)
+(global-set-key (kbd "C-w") 'kill-ring-save)
+(global-set-key (kbd "C-a") 'back-to-indentation)
+(global-set-key (kbd "M-m") 'move-beginning-of-line)
+(global-set-key (kbd "C-c '") 'comment-or-uncomment-region)
 
-;; (package-install 'embark)
-;; (global-set-key (kbd "C-;") 'embark-act)
-;; (setq prefix-help-command 'embark-prefix-help-command)
+;; 自定义函数
+(defun next-ten-lines()
+  "Move cursor to next 10 lines."
+  (interactive)
+  (next-line 10))
 
-;; (package-install 'consult)
-;; (global-set-key (kbd "C-s") 'consult-line)
-;; (global-set-key (kbd "M-s i") 'consult-imenu)
-;; (global-set-key (kbd "C-x b") 'consult-buffer)
+(defun previos-ten-lines()
+  "Move cursor to previous 10 lines."
+  (interactive)
+  (previous-line 10))
 
-;; (package-install 'which-key)
-;; (which-key-mode)
+(global-set-key (kbd "M-n") 'next-ten-lines)
+(global-set-key (kbd "M-p") 'previous-ten-lines)
 
-;; (global-set-key (kbd "C-h C-f") 'find-function)
-;; (global-set-key (kbd "C-h C-v") 'find-variable)
-;; (global-set-key (kbd "C-h C-k") 'find-function-on-key)
-
+(global-set-key (kbd "C-j") 'nil) ; 解绑"C-j"
+(global-set-key (kbd "C-j C-k") 'kill-whole-line)
 
 ;; bookmark
 (setq bookmark-save-flag 1)
@@ -60,3 +65,9 @@
 (add-hook 'org-mode-hook 'org-appear-mode)
 (setq org-appear-autolinks t)
 (setq org-appear-autoemphasis t)
+
+
+
+(provide 'init)
+
+;;; init.el ends here
