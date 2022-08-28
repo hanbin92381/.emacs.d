@@ -10,8 +10,9 @@
 (add-to-list 'global-mode-string '("" keycast-mode-line))
 (keycast-mode t)
 
-(package-install 'which-key)
-(which-key-mode)
+(use-package 'which-key
+  :ensure t
+  :config (which-key-mode t))
 
 
 (provide 'init-tools)

@@ -1,12 +1,13 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("f:/home/.emacs.d/init.el" . 645)
- ("f:/home/.emacs.d/lisp/init-packages.el" . 2537)
- ("f:/home/.emacs.d/"
-  (dired-filename . "f:/home/.emacs.d/lisp"))
+(("f:/home/.emacs.d/"
+  (dired-filename . "f:/home/.emacs.d/init.el"))
+ ("f:/home/.emacs.d/lisp/init-ui.el" . 127)
+ ("f:/home/.emacs.d/init.el" . 933)
+ ("f:/home/.emacs.d/lisp/init-completion.el" . 572)
+ ("f:/home/.emacs.d/lisp/init-packages.el" . 1863)
+ ("f:/home/.emacs.d/lisp/init-tools.el" . 241)
+ ("f:/home/.emacs.d/lisp/init-basic.el" . 863)
+ ("f:/home/.emacs.d/lisp/init-org.el" . 131)
  ("f:/home/.emacs.d/lisp/"
   (dired-filename . "f:/home/.emacs.d/lisp/init-tools.el"))
- ("f:/home/.emacs.d/lisp/init-tools.el" . 172)
- ("f:/home/.emacs.d/lisp/init-completion.el" . 153)
- ("f:/home/.emacs.d/lisp/init-basic.el" . 1170)
- ("f:/home/.emacs.d/lisp/init-ui.el" . 283)
  ("f:/home/.emacs.d/elpa/frame-local-20180330.940/frame-local-autoloads.el" . 411))
