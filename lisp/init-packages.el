@@ -4,11 +4,18 @@
 
 ;;; Code:
 
+(require 'init-const)
+(require 'init-funcs)
+
 ;; 设置源
 (require 'package)
-(setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
-			 ("nongnu" . "http://elpa.zilongshanren.com/nongnu/")
-			 ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+;; (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+;; 			 ("nongnu" . "http://elpa.zilongshanren.com/nongnu/")
+;; 			 ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+(setq package-archives '(("gnu"    . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/")
+			 ("nongnu" . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/")
+			 ("melpa"  . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/")))
+
 (package-initialize)
 
 ;; 防止反复调用 package-refresh-contents 会影响加载速度
@@ -36,20 +43,20 @@
   :after hydra)
 
 ;; undo-tree
-(use-package undo-tree
-  :ensure t
-  :init (global-undo-tree-mode)
-  :after hydra
-  :bind ("C-x C-h u" . hydra-undo-tree/body)
-  :hydra (hydra-undo-tree (:hint nil)
-  "
-  _p_: undo  _n_: redo _s_: save _l_: load   "
-  ("p"   undo-tree-undo)
-  ("n"   undo-tree-redo)
-  ("s"   undo-tree-save-history)
-  ("l"   undo-tree-load-history)
-  ("u"   undo-tree-visualize "visualize" :color blue)
-  ("q"   nil "quit" :color blue)))
+;; (use-package undo-tree
+;;   :ensure t
+;;   :init (global-undo-tree-mode)
+;;   :after hydra
+;;   :bind ("C-x C-h u" . hydra-undo-tree/body)
+;;   :hydra (hydra-undo-tree (:hint nil)
+;;   "
+;;   _p_: undo  _n_: redo _s_: save _l_: load   "
+;;   ("p"   undo-tree-undo)
+;;   ("n"   undo-tree-redo)
+;;   ("s"   undo-tree-save-history)
+;;   ("l"   undo-tree-load-history)
+;;   ("u"   undo-tree-visualize "visualize" :color blue)
+;;   ("q"   nil "quit" :color blue)))
 
 
 ;; multiple-cursors
