@@ -11,6 +11,7 @@
 *~
 *.eld
 *.data
+session.*
 
 auto-save-list/
 eln-cache/
