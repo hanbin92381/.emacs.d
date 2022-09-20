@@ -9,6 +9,7 @@
 !/.gitignore
 
 *~
+*.eld
 *.data
 
 auto-save-list/
