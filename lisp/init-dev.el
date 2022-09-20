@@ -28,10 +28,16 @@
   (projectile-globally-ignored-files '("TAGS" "tags" ".DS_Store"))
   (projectile-globally-ignored-file-suffixes '(".elc" ".pyc" ".o" ".swp" ".so" ".a")))
 
+;; Git
+(use-package magit)
+
 ;; flycheck(windows支持不佳)
 (use-package flycheck
   :hook (prog-mode . flycheck-mode))
 
+;; Debug tools
+(use-package dap-mode
+  :after hydra lsp-mode)
 
 ;; (require 'init-elisp)
 ;; (require 'init-cpp)

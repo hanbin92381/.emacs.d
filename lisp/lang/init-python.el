@@ -7,14 +7,17 @@
 
 (use-package python
   :ensure nil
+  :defer t
   :mode ("\\.py\\'" . python-mode)
+  :interpreter ("python" . python-mode)
+  ;; :config (require 'dap-python)
   :custom
   (python-indent-guess-indent-offset-verbose nil))
 
 (use-package pyvenv
   :config
-  (setenv "WORKON_HOME" "d:/miniconda3/envs")
-  (setq python-shell-interpreter "python3")
+  (setenv "WORKON_HOME" "~/.conda/envs")
+  (setq python-shell-interpreter "python")
   (pyvenv-mode t))
 
 (use-package lsp-pyright

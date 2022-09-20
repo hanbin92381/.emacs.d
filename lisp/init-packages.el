@@ -12,6 +12,9 @@
 (setq package-archives '(("gnu"    . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/")
 			 ("nongnu" . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/")
 			 ("melpa"  . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/")))
+;; (setq package-archives '(("melpa"  . "https://melpa.org/packages/")
+;; 			 ("gnu"    . "https://elpa.gnu.org/packages/")
+;; 			 ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
 
 ;; Initialize packages
 (unless (bound-and-true-p package--initialized) ; To avoid warnings in 27
@@ -19,8 +22,9 @@
   (package-initialize))
 
 ;; 防止反复调用 package-refresh-contents 会影响加载速度
-(unless package-archive-contents
-  (package-refresh-contents))
+;; (unless package-archive-contents
+;;   (package-refresh-contents))
+(package-refresh-contents)
 
 ;; Setup use-package
 (unless (package-installed-p 'use-package)
