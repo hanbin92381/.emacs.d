@@ -19,23 +19,12 @@
 
 ;; doom-themes
 (use-package doom-themes
-  :ensure t
-  :when (display-graphic-p)
-  :config
-  (load-theme 'doom-dracula t)
-  (doom-themes-org-config))
-
-;; Use default theme in terminals
-(use-package emacs
-  :ensure nil
-  :unless (display-graphic-p)
-  :config
-  (load-theme 'leuven t))
+  :init (load-theme 'doom-dracula t)
+  :config (doom-themes-org-config))
 
 ;; doom-modeline
 ;; 这里的执行顺序非常重要，doom-modeline-mode 的激活时机一定要在设置global-mode-string 之后
 (use-package doom-modeline
-  :ensure t
   :hook (after-init . doom-modeline-mode)
 ;;:custom
   )
@@ -54,17 +43,7 @@
 
 ;; rainbow-delimiters
 (use-package rainbow-delimiters
-  :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
-
-
-(use-package help
-  :ensure nil
-  :custom
-  (help-window-select t)
-  (help-enable-variable-value-editing t))
-
-
 
 
 (provide 'init-ui)

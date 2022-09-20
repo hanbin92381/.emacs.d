@@ -3,6 +3,11 @@
 /places
 /recentf
 
+# .开头的任何文件
+.*
+# 排除.gitignore本身，排除符号就是逻辑非
+!/.gitignore
+
 *~
 *.data
 
@@ -12,6 +17,7 @@ elpa/
 eshell/
 games/
 image-dired/
+lsp/
 server/
 snippets/
 url/

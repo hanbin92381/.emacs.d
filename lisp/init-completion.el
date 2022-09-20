@@ -8,25 +8,25 @@
 
 ;; company
 (use-package company
-  :ensure t
   :hook (after-init . global-company-mode)
   :config
-  (setq company-minimum-prefix-length 1) ; 只需敲 1 个字母就开始进行自动补全
+  (setq company-minimum-prefix-length 1)
   (setq company-tooltip-align-annotations t)
   (setq company-idle-delay 0.0)
-  (setq company-show-numbers t) ;; 给选项编号 (按快捷键 M-1、M-2 等等来进行选择).
+  (setq company-show-numbers t)
   (setq company-selection-wrap-around t)
-  (setq company-transformers '(company-sort-by-occurrence))) ; 根据选择的频率进行排序，读者如果不喜欢可以去掉
+  (setq company-transformers '(company-sort-by-occurrence)))
 
 ;; marginalia
 (use-package marginalia
-  :ensure t
   :init (marginalia-mode)
   :bind (:map minibuffer-local-map
 	      ("M-A" . marginalia-cycle)))
 
-(package-install 'vertico)
-(vertico-mode t)
+;; vertico
+(use-package vertico
+  :hook ((after-init . vertico-mode)
+	 (minibuffer-setup . vertico-repeat-save)))
 
 (package-install 'orderless)
 (setq completion-styles '(orderless))
@@ -52,8 +52,6 @@
 ;;   (("C-." . embark-act)         ;; pick some comfortable binding
 ;;    ("C-;" . embark-dwim)        ;; good alternative: M-.
 ;;    ("C-h B" . embark-bindings))) ;; alternative for `describe-bindings'
-
-
 
 
 (provide 'init-completion)
