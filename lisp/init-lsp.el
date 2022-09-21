@@ -10,8 +10,9 @@
 
 ;; lsp-mode
 (use-package lsp-mode
-  :ensure t
-  :hook (prog-mode . lsp-deferred)
+  :hook (prog-mode . (lambda ()
+		       (unless (derived-mode-p 'emacs-lisp-mode 'lisp-mode 'makefile-mode)
+			 (lsp-deferred))))
   :bind (:map lsp-mode-map
          ("C-c f" . lsp-format-region)
          ("C-c d" . lsp-describe-thing-at-point)
@@ -39,6 +40,9 @@
   (lsp-keep-workspace-alive nil)            ;; auto kill lsp server
   (lsp-eldoc-enable-hover nil))             ;; disable eldoc hover
 
+
+(use-package lsp-treemacs
+  :after (treemacs lsp))
 
 (provide 'init-lsp)
 

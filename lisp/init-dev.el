@@ -28,6 +28,26 @@
   (projectile-globally-ignored-files '("TAGS" "tags" ".DS_Store"))
   (projectile-globally-ignored-file-suffixes '(".elc" ".pyc" ".o" ".swp" ".so" ".a")))
 
+;; Tree layout file explorer
+(use-package treemacs
+  :defer t
+  :config
+  (treemacs-tag-follow-mode)
+  :bind
+  (:map global-map
+        ("M-0"       . treemacs-select-window)
+        ("C-x t 1"   . treemacs-delete-other-windows)
+        ("C-x t t"   . treemacs)
+        ("C-x t d"   . treemacs-select-directory)
+        ("C-x t B"   . treemacs-bookmark)
+        ("C-x t C-t" . treemacs-find-file)
+        ("C-x t M-t" . treemacs-find-tag))
+  (:map treemacs-mode-map
+	("/" . treemacs-advanced-helpful-hydra)))
+
+(use-package treemacs-projectile
+  :after (treemacs projectile))
+
 ;; Git
 (use-package magit)
 
@@ -36,8 +56,8 @@
   :hook (prog-mode . flycheck-mode))
 
 ;; Debug tools
-(use-package dap-mode
-  :after hydra lsp-mode)
+;; (use-package dap-mode
+;;   :after hydra lsp-mode)
 
 ;; (require 'init-elisp)
 ;; (require 'init-cpp)

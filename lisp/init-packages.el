@@ -22,9 +22,8 @@
   (package-initialize))
 
 ;; 防止反复调用 package-refresh-contents 会影响加载速度
-;; (unless package-archive-contents
-;;   (package-refresh-contents))
-(package-refresh-contents)
+(unless package-archive-contents
+  (package-refresh-contents))
 
 ;; Setup use-package
 (unless (package-installed-p 'use-package)

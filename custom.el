@@ -107,7 +107,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(exec-path-from-shell lsp-mode hungry-delete projectile ace-window yasnippet-snippets which-key vertico undo-tree undo-fu tiny restart-emacs rainbow-delimiters pretty-hydra org-appear orderless mwim monokai-theme marginalia keycast goto-chg google-this frame-local flycheck embark doom-themes doom-modeline dashboard consult company avy)))
+   '(treemacs-projectile treemacs exec-path-from-shell lsp-mode hungry-delete projectile ace-window yasnippet-snippets which-key vertico undo-tree undo-fu tiny restart-emacs rainbow-delimiters pretty-hydra org-appear orderless mwim monokai-theme marginalia keycast goto-chg google-this frame-local flycheck embark doom-themes doom-modeline dashboard consult company avy)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

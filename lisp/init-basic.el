@@ -85,9 +85,7 @@
 (use-package bookmark
   :ensure nil
   :config
-  (setq bookmark-save-flag 1)
-  (list-bookmarks)
-  (switch-to-buffer "*Bookmark List*"))
+  (setq bookmark-save-flag 1))
 
 
 (provide 'init-basic)
