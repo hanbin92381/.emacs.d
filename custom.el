@@ -107,15 +107,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(treemacs-projectile treemacs exec-path-from-shell lsp-mode hungry-delete projectile ace-window yasnippet-snippets which-key vertico undo-tree undo-fu tiny restart-emacs rainbow-delimiters pretty-hydra org-appear orderless mwim monokai-theme marginalia keycast goto-chg google-this frame-local flycheck embark doom-themes doom-modeline dashboard consult company avy)))
+   '(org-contrib all-the-icons rust-mode dap-mode which-key vertico use-package treemacs-projectile restart-emacs rainbow-delimiters pyvenv pretty-hydra org-appear orderless mwim marginalia magit lsp-treemacs lsp-pyright keycast hungry-delete goto-chg flycheck exec-path-from-shell doom-themes doom-modeline consult company avy-zap ace-pinyin)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(aw-leading-char-face ((t (:inherit font-lock-keyword-face :bold t :height 2.0))))
- '(aw-minibuffer-leading-char-face ((t (:inherit font-lock-keyword-face :bold t :height 1.0))))
- '(aw-mode-line-face ((t (:inherit mode-line-emphasis :bold t)))))
+ '(mode-line ((t (:height 0.9))))
+ '(mode-line-inactive ((t (:height 0.9)))))
 
 ;;; custom.el ends here

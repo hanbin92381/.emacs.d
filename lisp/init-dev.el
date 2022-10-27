@@ -56,12 +56,12 @@
   :hook (prog-mode . flycheck-mode))
 
 ;; Debug tools
-;; (use-package dap-mode
-;;   :after hydra lsp-mode)
+(use-package dap-mode
+  :after hydra lsp-mode)
 
 ;; (require 'init-elisp)
 ;; (require 'init-cpp)
-;; (require 'init-rust)
+(require 'init-rust)
 (require 'init-python)
 ;; (require 'init-sh)
 
