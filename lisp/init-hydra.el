@@ -19,24 +19,24 @@
                                 "^.*(\\(pretty-hydra-define\\) \\([a-zA-Z-]+\\)"
                                 2))))
   :init
-  ;; (cl-defun pretty-hydra-title (title &optional icon-type icon-name
-  ;;                                     &key face height v-adjust)
-  ;;   "Add an icon in the hydra title."
-  ;;   (let ((face (or face `(:foreground ,(face-background 'highlight))))
-  ;;         (height (or height 1.0))
-  ;;         (v-adjust (or v-adjust 0.0)))
-  ;;     (concat
-  ;;      (when (and (icon-displayable-p) icon-type icon-name)
-  ;;        (let ((f (intern (format "all-the-icons-%s" icon-type))))
-  ;;          (when (fboundp f)
-  ;;            (concat
-  ;;             (apply f (list icon-name :face face :height height :v-adjust v-adjust))
-  ;;             " "))))
-  ;;      (propertize title 'face face))))
+  (cl-defun pretty-hydra-title (title &optional icon-type icon-name
+                                      &key face height v-adjust)
+    "Add an icon in the hydra title."
+    (let ((face (or face `(:foreground ,(face-background 'highlight))))
+          (height (or height 1.0))
+          (v-adjust (or v-adjust 0.0)))
+      (concat
+       (when (and (icon-displayable-p) icon-type icon-name)
+         (let ((f (intern (format "all-the-icons-%s" icon-type))))
+           (when (fboundp f)
+             (concat
+              (apply f (list icon-name :face face :height height :v-adjust v-adjust))
+              " "))))
+       (propertize title 'face face))))
 
   ;; Global toggles
   (progn
-    (pretty-hydra-define toggles-hydra (:title "pretty-hydra-title"
+    (pretty-hydra-define toggles-hydra (:title (pretty-hydra-title "Toggles" 'faicon "toggle-on" :v-adjust -0.1)
                                         :color amaranth :quit-key "q")
       ("Basic"
        (("n" (if (fboundp 'display-line-numbers-mode)
