@@ -70,6 +70,9 @@
   (org-image-actual-width nil)
   (org-startup-with-inline-images t)
   (org-display-remote-inline-images 'cache)
+  ;; latex
+  ;;(org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
+  (org-preview-latex-default-process 'dvisvgm)
   ;; more user-friendly
   (org-imenu-depth 4)
   (org-clone-delete-id t)
@@ -84,7 +87,7 @@
   (org-confirm-babel-evaluate nil)
   ;; todo
   ;; !:自动增加时间戳 @:要求输入文字说明 同时使用@/!
-  (org-todo-keywords '((sequence "TODO(t)" "STARTED(s)" "HOLD(h!)" "WAIT(w!)" "|" "DONE(d!)")
+  (org-todo-keywords '((sequence "TODO(t)" "STARTED(s)" "HOLD(h@/!)" "WAIT(w!)" "|" "DONE(d!)")
 		       (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f!)")
 		       (sequence "|" "CANCELED(c@/!)")))
   (org-todo-keyword-faces '(("TODO"       :foreground "#7c7c75" :weight bold)

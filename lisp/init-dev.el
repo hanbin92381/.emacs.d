@@ -60,9 +60,9 @@
   :after hydra lsp-mode)
 
 ;; (require 'init-elisp)
-;; (require 'init-cpp)
-(require 'init-rust)
+(require 'init-cpp)
 (require 'init-python)
+;; (require 'init-rust)
 ;; (require 'init-sh)
 
 (provide 'init-dev)

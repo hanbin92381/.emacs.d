@@ -8,9 +8,15 @@
 (global-set-key (kbd "C-h C-v") 'find-variable)
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
-(global-set-key (kbd "M-w") 'kill-region)
-(global-set-key (kbd "C-w") 'kill-ring-save)
 (global-set-key (kbd "C-c '") 'comment-or-uncomment-region)
+
+;; 注意设置在emacs中屏蔽win键的全局快捷键
+(global-set-key (kbd "s-a") 'mark-whole-buffer) ; 对应Windows上面的Ctrl-a 全选
+(global-set-key (kbd "s-c") 'kill-ring-save)    ; 对应Windows上面的Ctrl-c 复制
+(global-set-key (kbd "s-s") 'save-buffer)       ; 对应Windows上面的Ctrl-s 保存
+(global-set-key (kbd "s-v") 'yank)              ; 对应Windows上面的Ctrl-v 粘贴
+(global-set-key (kbd "s-z") 'undo)              ; 对应Windows上面的Ctrl-z 撤销
+(global-set-key (kbd "s-x") 'kill-region)       ; 对应Windows上面的Ctrl-x 剪切
 
 ;; 一些自定义函数
 (defun next-ten-lines()

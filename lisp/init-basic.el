@@ -5,14 +5,13 @@
 ;;; Code:
 
 ;; Keep it clean
-(setq inhibit-splash-screen t)
+(setq inhibit-startup-screen t)
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
 ;; Display line number
-;; (global-linum-mode 1)
 (global-display-line-numbers-mode t)
 
 ;; Highlight current line
@@ -23,6 +22,9 @@
 
 ;; No eyes distraction
 (setq blink-cursor-mode nil)
+
+;; Set cursor type
+(setq cursor-type '(hbar . 7))
 
 ;; Fold long lines
 (toggle-truncate-lines nil)

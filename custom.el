@@ -42,6 +42,7 @@
                                         :family font
                                         :height (cond (sys/macp 130)
                                                       (sys/win32p 140)
+						      (sys/linuxp 140)
                                                       (t 100))))
 
     ;; Set mode-line font
@@ -106,8 +107,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(c-basic-offset 4)
- '(package-selected-packages '(org-appear use-package)))
+ '(package-selected-packages
+   '(rust-mode dap-mode all-the-icons which-key vertico use-package treemacs-projectile restart-emacs rainbow-delimiters pyvenv pretty-hydra org-appear orderless mwim marginalia magit lsp-treemacs lsp-pyright keycast hungry-delete goto-chg flycheck exec-path-from-shell doom-themes doom-modeline consult company avy-zap ace-pinyin)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
