@@ -57,6 +57,8 @@
 ;;   (add-to-list 'drag-stuff-except-modes 'org-mode)
 ;;   (drag-stuff-define-keys))
 
+;; expand-region
+
 ;; ;; Multiple cursors
 ;; (use-package multiple-cursors
 ;;   :bind (("C-S-c C-S-c"   . mc/edit-lines)

@@ -15,6 +15,11 @@
   (find-font (font-spec :name font-name)))
 
 ;; File
+(defun open-init-file()
+  "Open configuration file \"~/.emacs.d/init.el\"."
+  (interactive)
+  (find-file "~/.emacs.d/init.el"))
+
 (defun delete-this-file ()
   "Delete the current file, and kill the buffer."
   (interactive)
@@ -42,7 +47,7 @@
 
 ;; UI
 
-;;Misc
+;; Misc
 (defun icon-displayable-p ()
   "Return non-nil if icons are displayable."
   (and (or (display-graphic-p) (daemonp))
@@ -51,4 +56,5 @@
 
 
 (provide 'init-funcs)
+
 ;;; init-funcs.el ends here

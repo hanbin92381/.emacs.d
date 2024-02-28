@@ -59,6 +59,7 @@
   (>= emacs-major-version 29)
   "Emacs is 29 or above.")
 
+
 (provide 'init-const)
 
 ;;; init-const.el ends here

@@ -29,6 +29,9 @@
   (interactive)
   (previous-line 10))
 
+;; User-defined function key bindings
+(global-set-key (kbd "<f2>") 'open-init-file)
+
 (global-set-key (kbd "M-n") 'next-ten-lines)
 (global-set-key (kbd "M-p") 'previous-ten-lines)
 

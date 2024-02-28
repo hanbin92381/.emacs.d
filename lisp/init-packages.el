@@ -4,22 +4,19 @@
 
 ;;; Code:
 
-(require 'init-const)
-(require 'init-funcs)
-
 ;; 设置源
 (require 'package)
-(setq package-archives '(("gnu"    . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/")
-			 ("nongnu" . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/")
-			 ("melpa"  . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/")))
-;; (setq package-archives '(("melpa"  . "https://melpa.org/packages/")
-;; 			 ("gnu"    . "https://elpa.gnu.org/packages/")
-;; 			 ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
+;; (setq package-archives '(("gnu"    . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/")
+;;			    ("nongnu" . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/")
+;;  			    ("melpa"  . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/")))
+(setq package-archives '(("melpa"  . "https://melpa.org/packages/")
+ 			 ("gnu"    . "https://elpa.gnu.org/packages/")
+ 			 ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
 
 ;; Initialize packages
 (unless (bound-and-true-p package--initialized) ; To avoid warnings in 27
   (setq package-enable-at-startup nil)          ; To prevent initializing twice
-  (package-initialize))
+  (package-initialize))  ;; whether conflicts with :defer?
 
 ;; 防止反复调用 package-refresh-contents 会影响加载速度
 (unless package-archive-contents

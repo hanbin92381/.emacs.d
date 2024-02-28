@@ -17,24 +17,27 @@
   (setq company-selection-wrap-around t)
   (setq company-transformers '(company-sort-by-occurrence)))
 
+;; vertico
+(use-package vertico
+  :hook ((after-init . vertico-mode)
+	 (minibuffer-setup . vertico-repeat-save)))
+
+(use-package orderless
+  :config
+  (setq completion-styles '(orderless)))
+
 ;; marginalia
 (use-package marginalia
   :init (marginalia-mode)
   :bind (:map minibuffer-local-map
 	      ("M-A" . marginalia-cycle)))
 
-;; vertico
-(use-package vertico
-  :hook ((after-init . vertico-mode)
-	 (minibuffer-setup . vertico-repeat-save)))
-
-(package-install 'orderless)
-(setq completion-styles '(orderless))
-
 (package-install 'consult)
 (global-set-key (kbd "C-s") 'consult-line)
 (global-set-key (kbd "M-s i") 'consult-imenu)
 (global-set-key (kbd "C-x b") 'consult-buffer)
+;; 使用ripgrep来进行搜索
+;; consult-ripgrep
 
 ;; embark
 ;; (use-package embark
@@ -52,6 +55,8 @@
 ;;   (("C-." . embark-act)         ;; pick some comfortable binding
 ;;    ("C-;" . embark-dwim)        ;; good alternative: M-.
 ;;    ("C-h B" . embark-bindings))) ;; alternative for `describe-bindings'
+
+;; everything configure
 
 
 (provide 'init-completion)

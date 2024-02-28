@@ -13,7 +13,7 @@
 (setq frame-inhibit-implied-resize t)
 (setq frame-resize-pixelwise t)
 
-;; 优化鼠标滚动
+;; Optimize mouse wheel scrolling
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
 (setq mouse-wheel-progressive-speed nil)
 

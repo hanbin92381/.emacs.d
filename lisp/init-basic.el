@@ -24,7 +24,7 @@
 (setq blink-cursor-mode nil)
 
 ;; Set cursor type
-(setq cursor-type '(hbar . 7))
+(setq-default cursor-type '(hbar . 7))
 
 ;; Fold long lines
 (toggle-truncate-lines nil)
@@ -41,9 +41,9 @@
 ;; Recently opened files
 (require 'recentf)
 (recentf-mode 1)
-(setq recentf-max-menu-item 10)
+(setq recentf-max-menu-items 10)
 
-;; 使用y或p替换yes或no
+;; Replace yes/no with y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Encoding
