@@ -9,28 +9,10 @@
 
 (require 'init-const)
 
-;; Automatic parenthesis pairing
-(use-package elec-pair
-  :ensure nil
-  :hook (after-init . electric-pair-mode)
-  ;; :init (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit)
-  )
-
-;; Delete selection if you insert
-(use-package delsel
-  :ensure nil
-  :hook (after-init . delete-selection-mode))
-
-;; Automatically reload files was modified by external program
-(use-package autorevert
-  :ensure nil
-  :diminish
-  :hook (after-init . global-auto-revert-mode))
-
 ;; Framework for mode-specific buffer indexes
-(use-package imenu
-  :ensure nil
-  :bind (("C-." . imenu)))
+;;(use-package imenu
+;;  :ensure nil
+;;  :bind (("C-." . imenu)))
 
 ;; Jump to things in Emacs tree-style
 (use-package avy

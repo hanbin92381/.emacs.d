@@ -17,8 +17,14 @@
 ;; Highlight current line
 (global-hl-line-mode 1)
 
+;; Automatic parenthesis pairing
+(electric-pair-mode t)
+
 ;; Highlight parenthesises
 (show-paren-mode t)
+
+;; Delete selection when insert
+(delete-selection-mode t)
 
 ;; No eyes distraction
 (setq blink-cursor-mode nil)
@@ -38,6 +44,9 @@
 ;; No auto-saving
 (setq auto-save-default nil)
 
+;; Automatically reload files was modified by external program
+(global-auto-revert-mode t)
+
 ;; Recently opened files
 (require 'recentf)
 (recentf-mode 1)
@@ -46,16 +55,18 @@
 ;; Replace yes/no with y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Encoding
-;; ;; UTF-8 as the default coding system
-;; (when (fboundp 'set-charset-priority)
-;;   (set-charset-priority 'unicode))
+;; Set coding system
+;; UTF-8 as the default coding system
+(when (fboundp 'set-charset-priority)
+  (set-charset-priority 'unicode))
 
-;; (set-language-environment 'chinese-gbk)
-;; (prefer-coding-system 'utf-8-auto)
+(set-language-environment 'chinese-gbk)
+(prefer-coding-system 'utf-8-auto)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 
-
-;; 显示列号、大小
+;; Display cursor coordinates and file size
 (use-package simple
   :ensure nil
   :hook (after-init . size-indication-mode)
@@ -93,5 +104,3 @@
 (provide 'init-basic)
 
 ;;; init-basic.el ends here
-
-

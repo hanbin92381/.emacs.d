@@ -22,12 +22,12 @@
 (defun next-ten-lines()
   "Move cursor to next 10 lines."
   (interactive)
-  (next-line 10))
+  (forward-line 10))
 
 (defun previous-ten-lines()
   "Move cursor to previous 10 lines."
   (interactive)
-  (previous-line 10))
+  (forward-line -10))
 
 ;; User-defined function key bindings
 (global-set-key (kbd "<f2>") 'open-init-file)
@@ -37,6 +37,9 @@
 
 (global-set-key (kbd "C-j") 'nil) ; 解绑"C-j"
 (global-set-key (kbd "C-j C-k") 'kill-whole-line)
+
+;; Programming
+(global-set-key (kbd "<f5>") 'quickrun)
 
 
 (provide 'init-keybindings)

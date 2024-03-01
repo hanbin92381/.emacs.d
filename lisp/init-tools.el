@@ -23,7 +23,7 @@
 ;; modeline上显示所有的按键和执行的命令
 (use-package keycast)
 (add-to-list 'global-mode-string '("" keycast-mode-line))
-(keycast-mode t)
+(keycast-mode-line-mode t)
 
 
 (use-package exec-path-from-shell

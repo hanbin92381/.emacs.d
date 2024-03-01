@@ -6,9 +6,9 @@
 
 ;; 设置源
 (require 'package)
-;; (setq package-archives '(("gnu"    . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/")
-;;			    ("nongnu" . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/")
-;;  			    ("melpa"  . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/")))
+;;(setq package-archives '(("gnu"    . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/")
+;;			 ("nongnu" . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/")
+;;                         ("melpa"  . "http://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/")))
 (setq package-archives '(("melpa"  . "https://melpa.org/packages/")
  			 ("gnu"    . "https://elpa.gnu.org/packages/")
  			 ("nongnu" . "https://elpa.nongnu.org/nongnu/")))

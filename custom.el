@@ -4,6 +4,7 @@
 
 ;;; Code:
 
+
 ;; (setq centaur-logo nil)                        ; Logo file or nil (official logo)
 ;; (setq centaur-full-name "user name")           ; User full name
 ;; (setq centaur-mail-address "user@email.com")   ; Email address
@@ -108,14 +109,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(rust-mode dap-mode all-the-icons which-key vertico use-package treemacs-projectile restart-emacs rainbow-delimiters pyvenv pretty-hydra org-appear orderless mwim marginalia magit lsp-treemacs lsp-pyright keycast hungry-delete goto-chg flycheck exec-path-from-shell doom-themes doom-modeline consult company avy-zap ace-pinyin)))
+   '(embark-consult which-key vertico treemacs-projectile rust-mode restart-emacs rainbow-delimiters pyvenv pretty-hydra pkg-info org-contrib org-appear orderless mwim marginalia magit lsp-pyright keycast hungry-delete goto-chg flycheck exec-path-from-shell embark doom-themes doom-modeline dap-mode consult company cargo avy-zap all-the-icons ace-pinyin)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(mode-line ((t (:height 0.9))))
- '(mode-line-inactive ((t (:height 0.9)))))
+ )
 
 ;;; custom.el ends here

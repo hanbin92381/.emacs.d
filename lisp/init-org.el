@@ -85,6 +85,13 @@
   (org-return-follows-link t)
   (org-startup-truncated nil)
   (org-confirm-babel-evaluate nil)
+  )
+
+;; Keep track of tasks
+(use-package org-agenda
+  :ensure nil
+  :hook (org-agenda-finalize . org-agenda-to-appt)
+  :custom
   ;; todo
   ;; !:自动增加时间戳 @:要求输入文字说明 同时使用@/!
   (org-todo-keywords '((sequence "TODO(t)" "STARTED(s)" "HOLD(h@/!)" "WAIT(w!)" "|" "DONE(d!)")
@@ -102,13 +109,7 @@
 			    ("CANCELLED"  :foreground "#ff6480" :weight bold)))
   (org-log-done t)
   (org-log-into-drawer t)
-  )
-
-;; Keep track of tasks
-(use-package org-agenda
-  :ensure nil
-  :hook (org-agenda-finalize . org-agenda-to-appt)
-  :custom
+  ;; agenda
   (org-agenda-files (list (expand-file-name "task.org" org-directory)))
   (org-agenda-inhibit-startup t)
   (org-agenda-time-leading-zero t)
