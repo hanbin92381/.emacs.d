@@ -108,6 +108,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("2721b06afaf1769ef63f942bf3e977f208f517b187f2526f0e57c1bd4a000350" "b5fd9c7429d52190235f2383e47d340d7ff769f141cd8f9e7a4629a81abc6b19" "014cb63097fc7dbda3edf53eb09802237961cbb4c9e9abd705f23b86511b0a69" default))
  '(package-selected-packages
    '(embark-consult which-key vertico treemacs-projectile rust-mode restart-emacs rainbow-delimiters pyvenv pretty-hydra pkg-info org-contrib org-appear orderless mwim marginalia magit lsp-pyright keycast hungry-delete goto-chg flycheck exec-path-from-shell embark doom-themes doom-modeline dap-mode consult company cargo avy-zap all-the-icons ace-pinyin)))
 
