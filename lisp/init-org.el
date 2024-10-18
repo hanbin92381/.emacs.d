@@ -87,6 +87,19 @@
   (org-confirm-babel-evaluate nil)
   )
 
+;; Better image insert
+;(use-package org-download
+;  :config
+;  (setq-default org-download-heading-lvl nil)
+;  (setq-default org-download-image-dir "./images")
+;  (setq org-download-backend "wget")
+;  (setq org-download-abbreviate-filename-function (lambda (fn) fn)) ; use original filename
+;  (defun dummy-org-download-annotate-function (link)
+;    "")
+;  (setq org-download-annotate-function
+;      #'dummy-org-download-annotate-function)
+;  )
+
 ;; Keep track of tasks
 (use-package org-agenda
   :ensure nil
@@ -94,7 +107,7 @@
   :custom
   ;; todo
   ;; !:自动增加时间戳 @:要求输入文字说明 同时使用@/!
-  (org-todo-keywords '((sequence "TODO(t)" "STARTED(s)" "HOLD(h@/!)" "WAIT(w!)" "|" "DONE(d!)")
+  (org-todo-keywords '((sequence "TODO(t)" "STARTED(s)" "HOLD(h@/!)" "WAIT(w@/!)" "|" "DONE(d!)")
 		       (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f!)")
 		       (sequence "|" "CANCELED(c@/!)")))
   (org-todo-keyword-faces '(("TODO"       :foreground "#7c7c75" :weight bold)
